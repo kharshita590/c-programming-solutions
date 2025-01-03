@@ -169,3 +169,33 @@ int main(){
     }
     printf("Reversed %s",ch);
 }
+
+
+
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+    char str[100];
+    int i,j;
+    printf("Enter a string ");
+    scanf("%s",str);
+    i=0;
+    j=strlen(str)-1;
+    int isPalindrome=1;
+    while(i<j){
+        if(str[i]!=str[j]){
+            isPalindrome=1;
+            break;
+        }else{
+            isPalindrome=0;
+        }
+        i++;
+        j--;
+    }
+    if(isPalindrome){
+        printf("not palindrome");
+    }else{
+        printf("palindrome");
+    }
+}
