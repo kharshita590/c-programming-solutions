@@ -33,3 +33,28 @@ void main(){
     printf("The given string in upper case : %s\n",str);
 }
 
+
+#include <stdio.h>
+#include <ctype.h>
+
+int main(){
+    char str[30];
+    int v,c,i,s;
+    printf("Enter any string : ");
+    fgets(str,sizeof(str),stdin);
+    
+    for(i=0;str[i]!='\0';i++){
+        char ch=tolower(str[i]);
+        if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u'){
+            v++;
+        }else if(ch>='a' && ch<='z'){
+            c++;
+        }else{
+            s++;
+        }
+    }
+    printf("Vowels: %d\n", v);
+    printf("Consonants: %d\n", c);
+    printf("Spaces: %d\n", s);
+}
+
