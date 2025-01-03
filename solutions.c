@@ -97,3 +97,32 @@ int main(){
     result[i]='\0';
     printf("The given string : %s\n",result);
 }
+
+
+
+
+#include <stdio.h>
+
+int main(){
+    char a[10],b[10];
+    printf("Enter first string : ");
+    scanf("%s",a);
+    
+    printf("Enter second string : ");
+    scanf("%s",b);
+    
+    int i;
+    int flag =0;
+    while(a[i]!='\0' &&  b[i]!='\0'){
+        if(a[i]!=b[i]){
+            flag=1;
+            break;
+        }
+        i++;
+    }
+    if(flag==0){
+        printf("Two strings are equal\n");
+    }else{
+        printf("no not equal\n");
+    }
+}
