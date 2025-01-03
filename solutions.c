@@ -120,6 +120,28 @@ int main(){
         }
         i++;
     }
+
+
+
+#include <stdio.h>
+ int main(){
+     char ch[100];
+     int up,lc=0;
+     int i;
+     printf("Enter a string : ");
+     scanf("%s",ch);
+     i=0;
+     while(ch[i]!='\0'){
+         if(ch[i]>=65  && ch[i]<=92){
+             up++;
+         }if(ch[i]>=65 && ch[i]<=122){
+             lc++;
+         }
+         i++;
+     }
+     printf("lower %d",up);
+     printf("upper %d",lc);
+ }
     if(flag==0){
         printf("Two strings are equal\n");
     }else{
